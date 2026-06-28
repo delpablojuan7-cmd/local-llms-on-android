@@ -11,8 +11,8 @@ android {
         applicationId = "com.example.local_llm"
         minSdk = 24
         targetSdk = 35
-        versionCode = 14
-        versionName = "1.5.0"
+        versionCode = 15
+        versionName = "1.6.0-agent"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -70,6 +70,10 @@ dependencies {
     implementation("androidx.camera:camera-view:1.4.2")
     implementation("com.google.mlkit:text-recognition:16.0.1")
     implementation("com.google.ai.edge.litertlm:litertlm-android:0.10.2")
+    
+    // Agent Mode Dependencies
+    implementation("com.squareup.okhttp3:okhttp:4.12.0")          // HTTP для web search
+    implementation("androidx.documentfile:documentfile:1.0.1")    // Scoped Storage
 }
 
 // Android Studio may request this legacy Kotlin model task during sync. AGP 9
